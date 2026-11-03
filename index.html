@@ -7,8 +7,8 @@
 <meta name="description" content="The definitive edge rounding, chamfer, fillet and architectural profile plugin for SketchUp. 9 profiles, live viewport controls, instant preview. One-time purchase.">
 
 <!-- ── Security Hardening (meta-based for static hosting) ─────── -->
-<!-- CSP: No scripts allowed, no eval, no iframes, only self + Google Fonts for styles -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<!-- CSP: Allow only self, Google Fonts, and Cloudflare Analytics beacon -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
 <!-- Prevent MIME-type sniffing attacks -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <!-- Clickjacking protection — deny all framing -->
@@ -706,5 +706,8 @@ img{max-width:100%;display:block}
   </div>
 </footer>
 
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b15a161ac3d4828b50605e8486a956b"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
