@@ -7,8 +7,8 @@
 <meta name="description" content="The definitive edge rounding, chamfer, fillet and architectural profile plugin for SketchUp. 9 profiles, live viewport controls, instant preview. One-time purchase.">
 
 <!-- ── Security Hardening (meta-based for static hosting) ─────── -->
-<!-- CSP: Allow only self, Google Fonts, and Cloudflare Analytics beacon -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+<!-- CSP: Allow self, Google Fonts, Cloudflare Analytics beacon, and YouTube video embeds -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
 <!-- Prevent MIME-type sniffing attacks -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <!-- Clickjacking protection — deny all framing -->
@@ -290,6 +290,25 @@ img{max-width:100%;display:block}
   font-size:.8rem;
 }
 
+/* ── Video Demo ───────────────────────────────────── */
+.video-wrapper{
+  max-width:920px;
+  margin:48px auto 0;
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #1f1f1f;
+  background:#111;
+  box-shadow:0 24px 60px rgba(0,0,0,.7),0 0 50px rgba(220,38,38,.08);
+  aspect-ratio:16/9;
+}
+.video-wrapper iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+}
+
 /* ── Responsive ───────────────────────────────────── */
 @media(max-width:900px){
   .stats-grid{grid-template-columns:repeat(2,1fr)}
@@ -330,6 +349,7 @@ img{max-width:100%;display:block}
       SG Round Corner
     </a>
     <ul class="nav-links">
+      <li><a href="#demo">Demo</a></li>
       <li><a href="#profiles">Profiles</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#workflow">How It Works</a></li>
@@ -407,6 +427,28 @@ img{max-width:100%;display:block}
     </div>
   </div>
 </section>
+
+<!-- ─── Video Demo ─────────────────────────────────── -->
+<section id="demo" class="section" style="padding-top:80px;padding-bottom:80px">
+  <div class="container">
+    <div class="text-center">
+      <span class="badge">Watch In Action</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-.03em;margin-top:16px">See SG Round Corner at Work</h2>
+      <p style="color:#777;max-width:540px;margin:16px auto 0;font-size:1rem">Watch how fast and effortless edge beveling, filleting, and profile generation is directly inside SketchUp.</p>
+    </div>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+        title="SG Round Corner Demo Video" 
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
 
 <!-- ─── Profiles ──────────────────────────────────── -->
 <section id="profiles" class="section">
